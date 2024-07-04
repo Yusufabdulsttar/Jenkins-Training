@@ -3,7 +3,8 @@ pipeline {
   stages {
     stage('Build ') {
       steps {
-        sh '''#!/bin/bash
+        dir(path: '/home/yusuf/Desktop/Docker ') {
+          sh '''#!/bin/bash
 
                     # Check if the container is running
                     if [ "$(docker ps --filter "name=mongo-express" --filter "status=running" -q)" ]; then
@@ -12,6 +13,8 @@ pipeline {
                         echo "Express container is not running. Starting it up..."
                         docker compose -f Docker-compose.yml up -d
                     fi'''
+        }
+
         echo 'Build Completed'
       }
     }
