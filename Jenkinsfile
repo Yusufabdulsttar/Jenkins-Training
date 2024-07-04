@@ -7,7 +7,7 @@ pipeline {
           sh '''#!/bin/bash
 
                     # Check if the container is running
-                    if [ "$(docker ps --filter "name=mongo-express" --filter "status=running" -q)" ]; then
+                    if [ "$(docker ps --filter "name=docker-mongo-express-1" --filter "status=running" -q)" ]; then
                         echo "Express container is already running."
                     else
                         echo "Express container is not running. Starting it up..."
