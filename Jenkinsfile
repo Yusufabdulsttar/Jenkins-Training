@@ -6,7 +6,7 @@ pipeline {
         echo 'Build Completed'
       }
     }
-    stage('int') {
+    stage('intt') {
       steps {
         echo 'int Completed'
       }
