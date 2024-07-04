@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Build ') {
       steps {
-        dir(path: '/home/yusuf/Desktop/Docker ') {
+        dir(path: '/home/yusuf/Desktop/Docker') {
           sh '''#!/bin/bash
 
                     # Check if the container is running
